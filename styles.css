@@ -1,0 +1,83 @@
+/* Basic styles for the Emoji Memory Match Game */
+
+/* Set a playful background color */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f6ff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #7c3aed;
+  margin-top: 30px;
+}
+
+#moves {
+  margin: 20px;
+  font-size: 1.2em;
+  color: #4b5563;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 340px;
+}
+
+.card {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 2px solid #a5b4fc;
+  border-radius: 12px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  position: relative;
+}
+
+.card.flipped, .card.matched {
+  background: #c7d2fe;
+  cursor: default;
+}
+
+.card .emoji {
+  visibility: hidden;
+}
+
+.card.flipped .emoji, .card.matched .emoji {
+  visibility: visible;
+}
+
+#message {
+  margin: 20px;
+  font-size: 1.3em;
+  color: #059669;
+  min-height: 1.5em;
+}
+
+#restart-btn {
+  padding: 10px 24px;
+  font-size: 1em;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background 0.2s;
+}
+
+#restart-btn:hover {
+  background: #5b21b6;
+}
